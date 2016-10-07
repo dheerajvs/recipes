@@ -1,0 +1,34 @@
+a {
+  color: $accent-text-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  margin-bottom: 4px;
+}
+
+h3 {
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+// ol, ul {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
