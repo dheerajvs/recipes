@@ -1,8 +1,18 @@
 extends ./base
 
+block header
+  header
+    h1= 'Kitchen'
+
 block content
   article
-    ul
+    div.recipe-list
       each recipe in recipes
-        li
-          a(href=dashify(recipe.name) + '.html')= recipe.name
+        div.recipe-item.link-container
+          amp-img(
+            src=recipe.image.url alt=recipe.name
+            width=recipe.image.width height=recipe.image.height
+          )
+          div= recipe.name
+          a(href=`${dashify(recipe.name)}.html`)
+            span.link-spanner

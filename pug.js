@@ -12,6 +12,8 @@ const fn = pug.compileFile('templates/recipe.pug', {pretty: true});
 data.recipes.map(
   (recipe) => {
     const html = fn(Object.assign({}, data, recipe));
-    fs.writeFileSync(`./public/${dashify(recipe.name)}.html`, html);
+    const path = `./public/${dashify(recipe.name)}.html`;
+    fs.writeFileSync(path, html);
+    console.info(`pug.js: written to ${path}`);
   }
 );

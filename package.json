@@ -2,12 +2,15 @@
   "name": "recipes",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "live-server ./public",
-    "pug": "pug --pretty -O data.js -w -o ./public templates/index.pug",
+    "serve": "live-server ./public",
+    "pug:index": "pug --pretty -O data.js -w -o ./public templates/index.pug",
+    "pug:items": "watch 'node ./pug.js' ./templates",
     "scss": "sass --watch styles:styles",
-    "scss_prod": "sass --force --style compressed --update styles:styles"
+    "scss:prod": "sass --force --style compressed --update styles:styles",
+    "watch": "parallelshell 'npm run pug:index' 'npm run pug:items' 'npm run scss'"
   },
   "repository": {
     "type": "git",
@@ -27,9 +30,10 @@
     "live-server": "^1.1.0",
     "moment": "^2.15.1",
     "moment-duration-format": "^1.3.0",
+    "parallelshell": "^2.0.0",
     "pug": "^2.0.0-beta6",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "watch": "^1.0.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
