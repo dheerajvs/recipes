@@ -41,5 +41,5 @@ block instructions
   h2= 'Directions'
   time.duration(datetime=totalTime)= moment.duration(totalTime).format(() => 'h [hr] mm [min]')
   ol
-    each instruction in recipeInstructions.split(/\s*\d+\.?\s*/).slice(1)
+    each instruction in recipeInstructions.split(/\s*\d+\.\s*/).slice(1)
        li= instruction
