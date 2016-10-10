@@ -31,9 +31,8 @@ html(⚡ lang=config && config.lang)
     )
 
   body
-    .container
-      block header
-      block content
+    block header
+    block content
 
     if config && config.ga
       amp-analytics#analytics1(type='googleanalytics')

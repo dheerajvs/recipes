@@ -1,21 +1,49 @@
-.container {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-  margin: 48px auto;
-  width: 75%;
+.header {
+  background-color: $primary-color;
+  color: $primary-text;
+  padding: 40px 24px;
 }
 
-.segment {
-  box-shadow: rgba(139, 69, 19, 0.14902) 0px 2px 1px -1px;
-  padding: 16px 8px;
+body {
+  background-color: #B2EBF2;
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+// .container {
+//   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+//   margin: 48px auto;
+//   width: 75%;
+// }
+//
+// .segment {
+//   box-shadow: rgba(139, 69, 19, 0.14902) 0px 2px 1px -1px;
+//   padding: 16px 8px;
+// }
 
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
 }
 
+.recipe-item {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 16px 24px;
+
+  .recipe-thumbnail {
+    flex-shrink: 0;
+  }
+
+  .description {
+    padding: 0 40px;
+  }
+}
+
 .link-container {
-  margin: 16px;
   position: relative;
 }
 
