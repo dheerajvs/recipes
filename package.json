@@ -7,8 +7,8 @@
   "scripts": {
     "serve": "live-server ./public",
     "pug:index": "pug --pretty -O data.js -w -o ./public templates/index.pug",
-    "pug:items": "watch 'node ./pug.js' ./templates",
-    "scss": "sass --watch styles:styles",
+    "pug:items": "watch 'node ./pug.js' ./templates ./public/styles",
+    "scss": "sass --watch styles:public/styles",
     "scss:prod": "sass --force --style compressed --update styles:styles",
     "watch": "parallelshell 'npm run pug:index' 'npm run pug:items' 'npm run scss'"
   },
