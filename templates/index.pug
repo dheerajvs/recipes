@@ -2,16 +2,16 @@ extends ./base
 
 block header
   header.header
-    h1= 'Kitchen'
+    h1= 'Sowmya.Kitchen'
 
 block content
-  article.content
+  article
     div.recipe-list
       each recipe in recipes
         div.recipe-item.link-container
           amp-img.recipe-thumbnail(
             src=recipe.image.url alt=recipe.name
-            width=144 height=144
+            width=120 height=120
           )
           .description
             h2= recipe.name

@@ -236,19 +236,28 @@ h3 {
   margin-bottom: 4px;
   margin-top: 8px; }
 
-.header {
-  background-color: #00BCD4;
-  color: rgba(0, 0, 0, 0.87);
-  padding: 40px 24px; }
-
 body {
-  background-color: #B2EBF2;
+  color: #616161;
+  background-color: #dabfaa;
   background-image: url("https://www.transparenttextures.com/patterns/food.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
 
+h1, h2 {
+  font-weight: normal; }
+
+.header {
+  background-color: #795548;
+  color: white;
+  padding: 24px 24px; }
+  .header h1 {
+    font-family: cookie, Roboto, sans-serif;
+    font-size: 4em; }
+
 .recipe-list {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 12px 0; }
 
 .recipe-item {
   align-items: center;
@@ -256,7 +265,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-wrap: nowrap;
-  margin: 16px 24px; }
+  margin: 12px 8px;
+  max-width: 480px; }
   .recipe-item .recipe-thumbnail {
     flex-shrink: 0; }
   .recipe-item .description {
