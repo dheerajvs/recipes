@@ -80,7 +80,7 @@ let recipes = [
     "@context": "http://schema.org/",
     "@type": "Recipe",
     "mainEntityOfPage": "http://example.ampproject.org/recipe-metadata.html",
-    "name": "Not so spicy Tomato Rice",
+    "name": "Not so Spicy Tomato Rice With a Really Long Title",
     "image": {
       "@type": "ImageObject",
       "url": "/img/tomato-rice.jpg",
@@ -135,7 +135,7 @@ let recipes = [
     "@context": "http://schema.org/",
     "@type": "Recipe",
     "mainEntityOfPage": "http://example.ampproject.org/recipe-metadata.html",
-    "name": "Sweet Tomato Rice",
+    "name": "Rice",
     "image": {
       "@type": "ImageObject",
       "url": "/img/tomato-rice.jpg",
