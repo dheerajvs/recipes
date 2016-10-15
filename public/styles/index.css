@@ -229,17 +229,13 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
   font-size: 2.5em; }
 
-h2 {
-  margin-bottom: 4px; }
-
-h3 {
-  margin-bottom: 4px;
-  margin-top: 8px; }
+h2, h3 {
+  font-size: 1.5em;
+  margin-bottom: 6px; }
 
 body {
   color: #616161;
-  background-color: #dabfaa;
-  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  background-color: lightgray;
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
 
 h1, h2 {
@@ -248,7 +244,7 @@ h1, h2 {
 .header {
   background-color: #795548;
   color: white;
-  padding: 24px 24px; }
+  padding: 24px; }
   .header h1 {
     font-family: cookie, Roboto, sans-serif;
     font-size: 4em; }
@@ -256,36 +252,39 @@ h1, h2 {
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 12px 0; }
+  justify-content: center; }
 
 .recipe-item {
   align-items: center;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   display: flex;
-  margin: 12px 8px;
-  max-width: 480px; }
+  margin: 1px 1px 0 0;
+  max-width: 479px;
+  padding: 16px; }
   .recipe-item .recipe-thumbnail {
+    border-radius: 2px;
     flex-shrink: 0; }
   .recipe-item .description {
-    padding: 0 40px; }
+    padding: 0 8px 0 24px; }
 
 .recipe-article {
+  align-items: stretch;
   display: flex;
   flex-flow: column;
-  align-items: center; }
+  padding: 24px; }
   .recipe-article .recipe-header {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     display: flex;
-    margin: 24px;
-    max-width: 976px; }
+    margin-bottom: 24px; }
     .recipe-article .recipe-header .recipe-thumbnail {
       flex-shrink: 0; }
     .recipe-article .recipe-header .description {
       display: flex;
-      flex-flow: column; }
+      flex-flow: column;
+      flex-grow: 1; }
     .recipe-article .recipe-header .text {
       display: flex;
       flex-direction: column;
@@ -297,17 +296,22 @@ h1, h2 {
   .recipe-article .ingredients {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-    max-width: 976px; }
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 24px; }
     .recipe-article .ingredients header {
       background-color: #795548;
-      color: white; }
+      color: white;
+      padding: 16px; }
   .recipe-article .instructions {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-    max-width: 976px; }
+    display: flex;
+    flex-flow: column; }
     .recipe-article .instructions header {
       background-color: #795548;
-      color: white; }
+      color: white;
+      padding: 16px; }
 
 .link-container {
   position: relative; }

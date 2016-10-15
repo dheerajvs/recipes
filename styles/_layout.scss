@@ -1,7 +1,7 @@
 body {
   color: $text-color;
-  background-color: #dabfaa;
-  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  background-color: lightgray; //#dabfaa;
+  // background-image: url("https://www.transparenttextures.com/patterns/food.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
@@ -12,7 +12,7 @@ h1, h2 {
 .header {
   background-color: $primary-color;
   color: $primary-text-color;
-  padding: 24px 24px;
+  padding: 24px;
 
   h1 {
     font-family: cookie, Roboto, sans-serif;
@@ -24,38 +24,42 @@ h1, h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 12px 0;
+  // padding: 12px 0;
 }
 
 .recipe-item {
   align-items: center;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
   display: flex;
-  margin: 12px 8px;
-  max-width: 480px;
+  margin: 1px 1px 0 0;
+  max-width: 479px;
+  padding: 16px;
 
   .recipe-thumbnail {
+    border-radius: 2px;
     flex-shrink: 0;
   }
 
   .description {
-    padding: 0 40px;
+    padding: 0 8px 0 24px;
   }
 }
 
 .recipe-article {
+  align-items: stretch;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  padding: 24px;
 
   .recipe-header {
     // align-items: center;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     display: flex;
-    margin: 24px;
-    max-width: 976px;
+    margin-bottom: 24px;
+    // max-width: 976px;
 
     .recipe-thumbnail {
       flex-shrink: 0;
@@ -64,7 +68,7 @@ h1, h2 {
     .description {
       display: flex;
       flex-flow: column;
-      // justify-content: center;
+      flex-grow: 1;
     }
 
     .text {
@@ -85,22 +89,29 @@ h1, h2 {
   .ingredients {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    max-width: 976px;
+    display: flex;
+    flex-flow: column;
+    // max-width: 976px;
+    margin-bottom: 24px;
 
     header {
       background-color: $primary-color;
       color: $primary-text-color;
+      padding: 16px;
     }
   }
 
   .instructions {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    max-width: 976px;
-    
+    display: flex;
+    flex-flow: column;
+    // max-width: 976px;
+
     header {
       background-color: $primary-color;
       color: $primary-text-color;
+      padding: 16px;
     }
   }
 }
