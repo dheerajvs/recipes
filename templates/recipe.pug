@@ -46,7 +46,7 @@ block instructions
   section.instructions
     header
       h3= 'Directions'
-      time.duration(datetime=totalTime)= `Time: ${moment.duration(totalTime).format(() => 'h [hr] mm [min]')}`
+      time.duration(datetime=totalTime)= `Time: ${moment.duration(totalTime).format(() => 'h[h] mm[m]')}`
     ol
       each instruction in recipeInstructions.split(/\s*\d+\.\s*/).slice(1)
          li= instruction

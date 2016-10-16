@@ -5,13 +5,13 @@ block content
     div.recipe-list
       each recipe in recipes
         div.recipe-item.link-container
+          h2.name= recipe.name
           amp-img.recipe-thumbnail(
             src=recipe.image.url alt=recipe.name
-            width=180 height=180
+            width=288 height=216
             layout='responsive'
           )
-          .description
-            h2= recipe.name
+          p.time= `🕗 ${moment.duration(recipe.totalTime).format(() => 'h[h] mm[m]')}`
             //- p= recipe.description
           a(href=`${dashify(recipe.name)}.html`)
             span.link-spanner
