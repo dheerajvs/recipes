@@ -1,15 +1,14 @@
 extends ./base
 
 block content
-  article
+  article.home
     div.recipe-list
       each recipe in recipes
         div.recipe-item.link-container
           h2.name= recipe.name
           amp-img.recipe-thumbnail(
             src=recipe.image.url alt=recipe.name
-            width=288 height=216
-            layout='responsive'
+            width=288 height=216 layout='responsive'
           )
           p.time= `🕗 ${moment.duration(recipe.totalTime).format(() => 'h[h] mm[m]')}`
             //- p= recipe.description

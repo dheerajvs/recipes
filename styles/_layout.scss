@@ -17,88 +17,86 @@ h1, h2 {
 
   h1 {
     font-family: cookie, Roboto, sans-serif;
-    font-size: 1.5em;
-
-    @media (min-width: 640px) {
-      font-size: 2.5em;
-    }
   }
 }
 
-.recipe-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: $gutter ($gutter / 2) 0;
-}
+.home {
+  .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: $gutter ($gutter / 2) 0;
+  }
 
-.recipe-item {
-  border-radius: 2px;
-  flex-basis: calc(100% - 2 * 16px);
-  flex-grow: 1;
-  margin: 0 ($gutter / 2) $gutter;
-  max-width: (320px - 2 * $gutter);
-
-  .recipe-thumbnail {
+  .recipe-item {
     border-radius: 2px;
-  }
+    flex-basis: calc(100% - 2 * 16px);
+    flex-grow: 1;
+    margin: 0 ($gutter / 2) $gutter;
+    max-width: (320px - 2 * $gutter);
 
-  .name {
-    color: white;
-    background-image: linear-gradient(
-      rgba(0,0,0,0.4),
-      rgba(0,0,0,0.1)
-    );
-    font-size: 16px;
-    padding: 8px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    .recipe-thumbnail {
+      border-radius: 2px;
+    }
 
-    @media (min-width: 480px) {
-      padding: 12px;
+    .name {
+      color: white;
+      background-image: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.1)
+      );
+      font-size: 16px;
+      padding: 8px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 1;
+
+      @media (min-width: 480px) {
+        padding: 12px;
+      }
+      @media (min-width: 640px) {
+        font-size: 18px;
+      }
+    }
+
+    .time {
+      color: white;
+      background-color: rgba(0,0,0,0.33);
+      font-size: 11px;
+      padding: 0 4px 4px 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    @media (min-width: 360px) {
+      flex-basis: calc(50% - 3 * 16px);
     }
     @media (min-width: 640px) {
-      font-size: 18px;
+      flex-basis: calc(33% - 4 * 16px);
     }
-  }
-
-  .time {
-    color: white;
-    background-color: rgba(0,0,0,0.33);
-    font-size: 11px;
-    padding: 0 4px 4px 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-
-  @media (min-width: 360px) {
-    flex-basis: calc(50% - 3 * 16px);
-  }
-  @media (min-width: 640px) {
-    flex-basis: calc(33% - 4 * 16px);
-  }
-  @media (min-width: 900px) {
-    flex-basis: calc(25% - 5 * 16px);
-  }
-  @media (min-width: 1200px) {
-    flex-basis: calc(20% - 6 * 16px);
+    @media (min-width: 900px) {
+      flex-basis: calc(25% - 5 * 16px);
+    }
+    @media (min-width: 1200px) {
+      flex-basis: calc(20% - 6 * 16px);
+    }
   }
 }
 
 .recipe-article {
-  align-items: stretch;
-  display: flex;
-  flex-flow: column;
-  padding: 24px;
+  // align-items: stretch;
+  // display: flex;
+  // flex-flow: column;
+  // padding: 24px;
 
   .recipe-header {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    // background-color: white;
+    // box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     display: flex;
-    margin-bottom: 24px;
+    flex-flow: column;
+    margin-bottom: 16px;
 
     .recipe-thumbnail {
       flex-shrink: 0;
@@ -108,49 +106,46 @@ h1, h2 {
       display: flex;
       flex-flow: column;
       flex-grow: 1;
+      padding: 16px;
     }
 
     .text {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      justify-content: center;
-      padding: 8px 40px;
-    }
-
-    .social-share {
-      padding: 8px 40px 4px;
+      margin-bottom: 16px;
     }
   }
 
-  .ingredients {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    display: flex;
-    flex-flow: column;
-    // max-width: 976px;
-    margin-bottom: 24px;
+  .ingredients, .instructions {
+    padding: 0 16px 16px;
+    margin-bottom: 16px;
 
     header {
-      background-color: $primary-color;
-      color: $primary-text-color;
-      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .list {
+      margin-bottom: 0;
+
+      li {
+        line-height: 1.3;
+        margin-top: 0.25em;
+      }
     }
   }
+}
 
-  .instructions {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    display: flex;
-    flex-flow: column;
-    // max-width: 976px;
-
-    header {
-      background-color: $primary-color;
-      color: $primary-text-color;
-      padding: 16px;
-    }
-  }
+.footer {
+  background-color: $primary-color;
+  color: $primary-text-color;
+  // margin-top: -16px;
+  padding: 16px;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  text-align: center;
 }
 
 .link-container {

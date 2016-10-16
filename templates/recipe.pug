@@ -5,13 +5,13 @@ block title
   title= name
 
 block header
-  header.recipe-header
+  header.recipe-header.hrule
     amp-img.recipe-thumbnail(
       src=image.url alt=name
-      width=224 height=224
+      width=288 height=216 layout='responsive'
     )
     div.description
-      .text.hrule
+      .text
         h2= name
         p= description
       .social-share
@@ -34,19 +34,19 @@ block header
         amp-social-share(type='pinterest' width='45' height='33')
 
 block ingredients
-  section.ingredients
+  section.ingredients.hrule
     header
       h3= 'Ingredients'
       p.yield= 'Yield: ' + recipeYield
-    ul
+    ul.list
       each ingredient in recipeIngredient
         li= ingredient
 
 block instructions
-  section.instructions
+  section.instructions.hrule
     header
       h3= 'Directions'
       time.duration(datetime=totalTime)= `Time: ${moment.duration(totalTime).format(() => 'h[h] mm[m]')}`
-    ol
+    ol.list
       each instruction in recipeInstructions.split(/\s*\d+\.\s*/).slice(1)
          li= instruction

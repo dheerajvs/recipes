@@ -8,7 +8,7 @@ html(⚡ lang=config && config.lang)
       name='viewport'
       content='width=device-width,minimum-scale=1,initial-scale=1'
     )
-    meta(name='theme-color' content='#1976D2')
+    meta(name='theme-color' content='#CDDC39')
 
     style(amp-custom)
       include ../public/styles/index.css
@@ -34,8 +34,9 @@ html(⚡ lang=config && config.lang)
   body
     header.header
       h1= 'Sowmya.Kitchen'
-
     block content
+    footer.footer
+      small= 'Copyright ©2016, Sowmya B A'
 
     if config && config.ga
       amp-analytics#analytics1(type='googleanalytics')
