@@ -32,11 +32,10 @@ html(⚡ lang=config && config.lang)
     )
 
   body
-    header.header
-      h1= 'Sowmya.Kitchen'
+    block header
     block content
     footer.footer
-      small= 'Copyright ©2016, Sowmya B A'
+      p= 'Copyright © 2016, Sowmya B A'
 
     if config && config.ga
       amp-analytics#analytics1(type='googleanalytics')
