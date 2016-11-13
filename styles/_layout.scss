@@ -1,6 +1,6 @@
 body {
   color: $text-color;
-  background-color: white;
+  background-color: lighten($primary-light-color, 5%);
   // background-image: url("https://www.transparenttextures.com/patterns/food.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
@@ -10,28 +10,34 @@ h1, h2 {
 }
 
 .header {
-  color: $primary-text-color;
-  // background-color: $primary-color;
-  margin: 0 40px;
+  margin: 0 calc(16px + 4%);
 
-  .perspective {
-    display: flex;
+  .awning-perspective {
+    background: repeating-linear-gradient(
+      to right,
+      $primary-dark-color,
+      $primary-dark-color 5.88%,
+      $primary-light-color 5.88%,
+      $primary-light-color 11.76%
+    );
+    height: 40px;
+    margin-top: -15px;
+    transform: perspective(500px) rotateX(45deg);
+    transform-origin: 50% 100%;
   }
 
-  .awning {
-    // background: repeating-linear-gradient(
-    //   to right,
-    //   $primary-dark-color,
-    //   $primary-dark-color 20px,
-    //   $primary-color 20px,
-    //   $primary-color 40px
-    // );
+  .awning-rod {
     // box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    background-color: #FFFDD0;
-    height: 1px;
+    background: linear-gradient(
+      lighten($primary-light-color, 5%),
+      lighten($primary-dark-color, 40%),
+      lighten($primary-light-color, 5%)
+    );
+    height: 12px;
+    margin: 0 -8px;
   }
 
-  .awning-border {
+  .awning-fall {
     // background: repeating-linear-gradient(
     //   to right,
     //   $primary-dark-color,
@@ -39,17 +45,19 @@ h1, h2 {
     //   $primary-color 20px,
     //   $primary-color 40px
     // );
-    background-color: $primary-color;
-    display: block;
-    // position: relative;
-    // top: 2px;
+    background-color: $primary-dark-color;
+    -webkit-clip-path: url(#awning-clip);
+    clip-path: url(#awning-clip);
+    height: 80px;
+    width: 100%;
   }
 
   h1 {
-    font-family: cookie, Roboto, sans-serif;
+    color: $primary-light-color;
+    font-family: serif;
     padding: 0 20px;
     position: relative;
-    top: -100px;
+    top: -95px;
     text-align: center;
   }
 }
@@ -171,8 +179,8 @@ h1, h2 {
 }
 
 .footer {
-  background-color: $primary-color;
-  color: $primary-text-color;
+  background-color: $primary-dark-color;
+  color: $primary-light-color;
   // margin-top: -16px;
   padding: 40px 16px;
   // position: fixed;

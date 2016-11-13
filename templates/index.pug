@@ -2,40 +2,19 @@ extends ./base
 
 block header
   header.header
-    div.perspective
-      svg(
-        viewbox="0 0 160 20" preserveAspectRatio="none"
-        width="50%" height="20"
-      ).mirror
-        path(d="M0   0 h10 l1.1  20 h-11.1" fill="#cddc39")
-        path(d="M10  0 h20 l3.3  20 h-22.2" fill="#afb42b")
-        path(d="M30  0 h20 l5.6  20 h-22.2" fill="#cddc39")
-        path(d="M50  0 h20 l7.8  20 h-22.2" fill="#afb42b")
-        path(d="M70  0 h20 l10   20 h-22.2" fill="#cddc39")
-        path(d="M90  0 h20 l12.2 20 h-22.2" fill="#afb42b")
-        path(d="M110 0 h20 l14.4 20 h-22.2" fill="#cddc39")
-        path(d="M130 0 h20 l16.7 20 h-22.2" fill="#afb42b")
-        //- path(d="M150 0 h20 l18.9 20 h-22.2" fill="#cddc39")
-      svg(
-        viewbox="0 0 160 20" preserveAspectRatio="none"
-        width="50%" height="20"
-      )
-        path(d="M0   0 h10 l1.1  20 h-11.1" fill="#cddc39")
-        path(d="M10  0 h20 l3.3  20 h-22.2" fill="#afb42b")
-        path(d="M30  0 h20 l5.6  20 h-22.2" fill="#cddc39")
-        path(d="M50  0 h20 l7.8  20 h-22.2" fill="#afb42b")
-        path(d="M70  0 h20 l10   20 h-22.2" fill="#cddc39")
-        path(d="M90  0 h20 l12.2 20 h-22.2" fill="#afb42b")
-        path(d="M110 0 h20 l14.4 20 h-22.2" fill="#cddc39")
-        path(d="M130 0 h20 l16.7 20 h-22.2" fill="#afb42b")
-        //- path(d="M150 0 h20 l18.9 20 h-22.2" fill="#cddc39")
-    .awning
-    svg(
-      width="100%" height="100px"
-    ).awning-border
-      pattern(x="-7.5" id="waves" patternUnits="userSpaceOnUse" width="100" height="100")
-        path(d="M0 100 V50 Q25 25 50 50 T100 50 V100" fill="white")
-      rect(x="0" y="0" width="100%" height="100px" fill="url(#waves)")
+    .awning-perspective
+    .awning-rod
+    .awning-fall
+    //- viewbox='0 0 480 75' width='100%' height='75px'
+    svg(width=0 height=0)
+      defs
+        clippath#awning-clip(clipPathUnits='objectBoundingBox')
+          path(d='M-0.03125,0 v0.8 q0.03125,-0.2 0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 t0.0625,0 v-0.8 Z')
+            //- path(d='M0,0 v60 q15,-15 30,0 t30,0 v-60 Z' fill='black' stroke='black')
+          //- path(d='M0,0 v60 q15,-15 30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 v-60')
+      //- pattern(x="-7.5" id="waves" patternUnits="userSpaceOnUse" width="100" height="100")
+      //-   path(d="M0 100 V50 Q25 25 50 50 T100 50 V100" fill="white")
+      //- rect(x="0" y="0" width="100%" height="100px" fill="url(#waves)")
     h1= 'Sowmya.Kitchen'
 
 block content
