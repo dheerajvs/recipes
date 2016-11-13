@@ -16,9 +16,9 @@ h1, h2 {
     background: repeating-linear-gradient(
       to right,
       $primary-dark-color,
-      $primary-dark-color 5.88%,
-      $primary-light-color 5.88%,
-      $primary-light-color 11.76%
+      $primary-dark-color 2.86%,
+      $primary-light-color 2.86%,
+      $primary-light-color 5.71%
     );
     height: 40px;
     margin-top: -15px;
@@ -31,6 +31,8 @@ h1, h2 {
     background: linear-gradient(
       lighten($primary-light-color, 5%),
       lighten($primary-dark-color, 40%),
+      lighten($primary-light-color, 5%),
+      lighten($primary-dark-color, 40%),
       lighten($primary-light-color, 5%)
     );
     height: 12px;
@@ -38,27 +40,37 @@ h1, h2 {
   }
 
   .awning-fall {
-    // background: repeating-linear-gradient(
-    //   to right,
-    //   $primary-dark-color,
-    //   $primary-dark-color 20px,
-    //   $primary-color 20px,
-    //   $primary-color 40px
-    // );
-    background-color: $primary-dark-color;
+    background: repeating-linear-gradient(
+      to right,
+      darken($primary-light-color, 2%),
+      $primary-light-color 2.86%,
+      darken($primary-light-color, 2%) 5.71%
+    );
+    // background-color: $primary-light-color;
     -webkit-clip-path: url(#awning-clip);
     clip-path: url(#awning-clip);
-    height: 80px;
-    width: 100%;
+
+    .awning-fall-stitch {
+      height: 80px;
+      width: 100%;
+      stroke: lighten($primary-dark-color, 25%);
+    }
   }
 
   h1 {
-    color: $primary-light-color;
+    color: $primary-dark-color;
     font-family: serif;
     padding: 0 20px;
     position: relative;
     top: -95px;
     text-align: center;
+    text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+  }
+
+  .tomato {
+    position: relative;
+    left: -4px;
+    top: 4px;
   }
 }
 
